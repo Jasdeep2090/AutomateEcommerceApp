@@ -4,6 +4,8 @@
     "module": "commonjs",
     "types": ["node", "@playwright/test"],
     "strict": true,
+    "resolveJsonModule": true,
     "esModuleInterop": true
-  }
+  
 }
+  }
