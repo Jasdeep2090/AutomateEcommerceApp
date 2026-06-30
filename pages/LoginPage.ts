@@ -15,7 +15,10 @@ export class LoginPage extends BasePage {
      loginHeading = this.page.locator(
             'h2:has-text("Login to your account")'
         );
-      logoutlink = this.page.locator('a[href="/logout"]');  
+      logoutLink = this.page.locator('a[href="/logout"]');  
+      errorMessage = this.page.getByText(
+    'Your email or password is incorrect!'
+);
 
   
 
@@ -30,4 +33,9 @@ export class LoginPage extends BasePage {
         await this.fill(this.password, pass);
         await this.click(this.loginBtn);
     }
+
+    async logout() {
+    await this.logoutLink.click();
+    await expect(this.loginHeading).toBeVisible();
+}
 }

@@ -3,7 +3,7 @@ import { test as base } from '@playwright/test';
 // import { HomePage } from '../pages/HomePage';
  import { LoginPage } from '../pages/LoginPage';
 // import { SignupPage } from '../pages/SignupPage';
-// import { ProductPage } from '../pages/ProductPage';
+ import { ProductPage } from '../pages/ProductPage';
 // import { CartPage } from '../pages/CartPage';
 // import { CheckoutPage } from '../pages/CheckoutPage';
 // import { PaymentPage } from '../pages/PaymentPage';
@@ -13,7 +13,7 @@ import { test as base } from '@playwright/test';
 //     homePage: HomePage;
      loginPage: LoginPage;
 //     signupPage: SignupPage;
-//     productPage: ProductPage;
+    productPage: ProductPage;
 //     cartPage: CartPage;
 //     checkoutPage: CheckoutPage;
 //     paymentPage: PaymentPage;
@@ -34,9 +34,9 @@ import { test as base } from '@playwright/test';
 //         await use(new SignupPage(page));
 //     },
 
-//     productPage: async ({ page }, use) => {
-//         await use(new ProductPage(page));
-//     },
+    productPage: async ({ page }, use) => {
+         await use(new ProductPage(page));
+     },
 
 //     cartPage: async ({ page }, use) => {
 //         await use(new CartPage(page));
